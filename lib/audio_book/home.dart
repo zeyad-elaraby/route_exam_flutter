@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomeScreen extends StatefulWidget {
+class AudioBookHomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
-  HomeScreen({super.key});
+  AudioBookHomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<AudioBookHomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<AudioBookHomeScreen> {
   List<String> images = [
     "assets/images/Image Placeholder 1.png",
     "assets/images/Image2.png",
@@ -144,49 +144,64 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 150, // Adjust the height as needed
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25, right: 25),
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: Color(0xFFF5F5FA),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset("assets/images/slider2.png"),
-                                      SizedBox(
-                                        width: 3,
+                        Padding(
+                          padding: EdgeInsets.only(top: 16),
+                          child: Container(
+                            height: 150, // Adjust the height as needed
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 25, right: 25),
+                              child: ListView.separated(
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Color(0xFFF5F5FA),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 12),
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                              "assets/images/slider2.png"),
+                                          SizedBox(
+                                            width: 3,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: 25, right: 25),
+                                            child: Column(
+                                              children: [
+                                                Text(
+                                                  "Light Mage",
+                                                  style: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      fontSize: 16),
+                                                ),
+                                                Text(
+                                                  "Laurie Forest",
+                                                  style: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      fontSize: 12),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(top: 25, right: 25),
-                                        child: Column(
-                                          children: [
-                                            Text(
-                                              "Light Mage",
-                                              style: GoogleFonts.poppins(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 16),
-                                            ),
-                                            Text(
-                                              "Laurie Forest",
-                                              style: GoogleFonts.poppins(
-                                                  fontWeight: FontWeight.w400,
-                                                  fontSize: 12),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                );
-                              },
-                              itemCount: 3,
+                                    ),
+                                  );
+                                },
+                                itemCount: 3,
+                                separatorBuilder:
+                                    (BuildContext context, int index) {
+                                  return SizedBox(
+                                    width: 16,
+                                  );
+                                },
+                              ),
                             ),
                           ),
                         ),
