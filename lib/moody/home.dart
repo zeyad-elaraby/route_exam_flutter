@@ -40,9 +40,12 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
             child: badges.Badge(
               position: badges.BadgePosition.topEnd(end: 0),
               badgeContent: Text(' '),
-              child: ImageIcon(
-                AssetImage("assets/images/moody_bell.png"),
-                size: 30,
+              child: InkWell(
+                onTap: () {},
+                child: ImageIcon(
+                  AssetImage("assets/images/moody_bell.png"),
+                  size: 30,
+                ),
               ),
             ),
           )
@@ -51,7 +54,8 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
       body: ListView(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 32, right: 32, top: 24, bottom: 40),
+            padding:
+                const EdgeInsets.only(left: 32, right: 32, top: 24, bottom: 40),
             child: Column(
               children: [
                 Row(
@@ -95,8 +99,12 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                               color: Color(0xFFE4E7EC),
                               borderRadius: BorderRadius.circular(35),
                             ),
-                            child: Image.asset(
-                                "assets/images/moody_love_icon.png")),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: GestureDetector(
+                                  child: Image.asset(
+                                      "assets/images/moody_love_icon.png"),
+                                ))),
                         Text("love")
                       ],
                     ),
@@ -109,8 +117,12 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                               color: Color(0xFFE4E7EC),
                               borderRadius: BorderRadius.circular(35),
                             ),
-                            child: Image.asset(
-                                "assets/images/moody_cool_icon.png")),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: GestureDetector(
+                                  child: Image.asset(
+                                      "assets/images/moody_cool_icon.png"),
+                                ))),
                         Text("cool")
                       ],
                     ),
@@ -123,8 +135,12 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                               color: Color(0xFFE4E7EC),
                               borderRadius: BorderRadius.circular(35),
                             ),
-                            child: Image.asset(
-                                "assets/images/moody_happy_icon.png")),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: GestureDetector(
+                                  child: Image.asset(
+                                      "assets/images/moody_happy_icon.png"),
+                                ))),
                         Text("happy")
                       ],
                     ),
@@ -137,8 +153,12 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                               color: Color(0xFFE4E7EC),
                               borderRadius: BorderRadius.circular(35),
                             ),
-                            child: Image.asset(
-                                "assets/images/moody_sad_icon.png")),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: GestureDetector(
+                                  child: Image.asset(
+                                      "assets/images/moody_sad_icon.png"),
+                                ))),
                         Text("sad")
                       ],
                     ),
@@ -274,7 +294,7 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Feature",
+                      "Exercise",
                       style: GoogleFonts.inter(
                           color: Colors.black,
                           fontSize: 18,
@@ -297,6 +317,9 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                       ],
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 16,
                 ),
                 Column(
                   children: [
