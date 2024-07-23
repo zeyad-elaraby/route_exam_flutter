@@ -346,7 +346,7 @@ class _MoodyHomeScreenState extends State<MoodyHomeScreen> {
                       children: [
                         ExerciseIcon(
                           image: "assets/images/moody_breathing.png",
-                          text: "Beathing",
+                          text: "Breathing",
                           containerColor: Color(0xFFFFFAF5),
                         ),
                         ExerciseIcon(
